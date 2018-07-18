@@ -8,7 +8,7 @@
  */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { BackHandler } from 'react-native';
+import { BackHandler as NewBackHandler, BackAndroid } from 'react-native';
 import NavigationExperimental from 'react-native-experimental-navigation';
 
 import Actions, { ActionMap } from './Actions';
@@ -17,6 +17,8 @@ import Reducer, { findElement } from './Reducer';
 import DefaultRenderer from './DefaultRenderer';
 import Scene from './Scene';
 import * as ActionConst from './ActionConst';
+
+const BackHandler = BackAndroid || NewBackHandler;
 
 const {
   RootContainer: NavigationRootContainer,

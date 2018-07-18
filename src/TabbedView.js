@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { View, StyleSheet, ViewPropTypes } from 'react-native';
+import { View, StyleSheet, ViewPropTypes as NewViewPropTypes } from 'react-native';
 import StaticContainer from 'react-static-container';
-
+var ViewPropTypes;
+if (NewViewPropTypes) {
+  ViewPropTypes = NewViewPropTypes;
+} else {
+  ViewPropTypes = View.propTypes;
+}
 const styles = StyleSheet.create({
   scene: {
     bottom: 0,

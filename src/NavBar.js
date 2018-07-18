@@ -34,11 +34,17 @@ import {
   Text,
   TouchableOpacity,
   View,
-  ViewPropTypes
+  ViewPropTypes as NewViewPropTypes,
 } from 'react-native';
 import Actions from './Actions';
 import _drawerImage from './menu_burger.png';
 import _backButtonImage from './back_chevron.png';
+var ViewPropTypes;
+if (NewViewPropTypes) {
+  ViewPropTypes = NewViewPropTypes;
+} else {
+  ViewPropTypes = View.propTypes;
+}
 
 const styles = StyleSheet.create({
   title: {

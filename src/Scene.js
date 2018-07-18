@@ -8,8 +8,14 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ViewPropTypes, Text } from 'react-native';
+import { View, ViewPropTypes as NewViewPropTypes, Text } from 'react-native';
 
+var ViewPropTypes;
+if (NewViewPropTypes) {
+  ViewPropTypes = NewViewPropTypes;
+} else {
+  ViewPropTypes = View.propTypes;
+}
 export default class extends React.Component {
 
   // @todo - should all props be documented/specified here?
@@ -23,7 +29,7 @@ export default class extends React.Component {
     tabStyle: ViewPropTypes.style,
     tabTitleStyle: Text.propTypes.style,
     tabSelectedTitleStyle: Text.propTypes.style,
-    tabTitle: PropTypes.string
+    tabTitle: PropTypes.string,
   };
 
   render() {
