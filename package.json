@@ -1,7 +1,7 @@
 {
   "name": "react-native-router-flux",
-  "version": "3.43.1",
-  "description": "React Native Router using Flux architecture",
+  "version": "3.43.3",
+  "description": "React Native Router Flux v3",
   "repository": {
     "type": "git",
     "url": "https://github.com/vincicat/rnrf3/"
@@ -42,8 +42,7 @@
     "lodash.isequal": "^4.5.0",
     "prop-types": "^15.6.0",
     "react-native-tabs": "^1.0.9",
-    "react-static-container": "^1.0.2",
-    "react-native-experimental-navigation": ">=0.29.1"
+    "react-static-container": "^1.0.2"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.1",
@@ -60,7 +59,8 @@
   "peerDependencies": {
     "react": "*",
     "react-native": ">=0.42.3",
-    "react-dom": "*"
+    "react-dom": "*",
+    "react-native-experimental-navigation": ">=0.29.1"
   },
   "jest": {
     "preset": "react-native",
