@@ -39,6 +39,7 @@ class TabbedView extends Component {
         key={navigationState.key}
         pointerEvents={isSelected ? 'auto' : 'none'}
         removeClippedSubviews={!isSelected}
+        importantForAccessibility={isSelected ? 'yes' : 'no-hide-descendants'}
         style={[
           styles.scene,
           { opacity: isSelected ? 1 : 0 },
